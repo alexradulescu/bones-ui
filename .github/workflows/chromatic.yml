@@ -5,10 +5,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - run: |
+    - uses: actions/checkout@v1
+    - run: |
         yarn && yarn build
-      - uses: chromaui/action@v1
-        with:
-          projectToken: eseg0joabyd
-          token: ${{secrets.GITHUB_TOKEN}}
+    - uses: chromaui/action@v1
+      with: 
+        projectToken: eseg0joabyd
+        token: ${{ secrets.GITHUB_TOKEN }}
